@@ -1,0 +1,10 @@
+/* BEFORE:
+var magic = function() {
+  return new Date();
+};
+*/
+
+const magic = () => {
+  "use strict";
+  return new Date();
+};

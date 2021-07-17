@@ -1,0 +1,13 @@
+function truncateString(str, num) {
+  let myStringTruncated = str.substring(0, num);
+  if (num < 40){
+    str = myStringTruncated + '...';
+  }
+  else{ 
+    str = myStringTruncated;
+  }
+  console.log(myStringTruncated);
+  return str;
+}
+
+truncateString("A-tisket a-tasket A green and yellow basket", 8);

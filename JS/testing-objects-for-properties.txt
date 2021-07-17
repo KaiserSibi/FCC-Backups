@@ -1,0 +1,11 @@
+function checkObj(obj, checkProp) {
+  // Only change code below this line
+  if (obj.hasOwnProperty(checkProp) == true){
+    var result = obj[checkProp];
+  }
+  else {
+    var result = "Not Found";
+  }
+  return result;
+  // Only change code above this line
+}

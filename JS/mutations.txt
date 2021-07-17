@@ -1,0 +1,64 @@
+function mutation(arr) {
+  /*
+  let arr1 = arr.shift();
+  let arr2 = arr.pop();
+  let arr1Arr = [...arr1];
+  let arr2Arr = [...arr2];
+  let arr1Length = arr1Arr.length;
+  let arr2Length = arr2Arr.length;
+  let countArr = [];
+
+  let numConditional = 0;
+
+  for (let i = 0; i < arr1Length; i++){
+    for (let j = 0; j < arr2Length; j++){
+      if (arr1Arr[i] == arr2Arr[j]){
+        numConditional += 1;
+        countArr.push(arr1Arr[i]);
+        console.log(numConditional + arr1Arr[i]);
+      }
+    }
+    for (let x = arr2Length; x >= -1; x--){
+      if (arr1Arr[i] == arr2Arr[x]){
+        numConditional += 1;
+        countArr.push(arr1Arr[i]);
+        console.log(numConditional + arr1Arr[i]);
+      }
+    }
+
+  }
+
+  //console.log(arr1 + ' | ' + arr2);
+  //console.log(arr1Arr + ' | ' + arr2Arr);
+  //console.log(countArr);
+  let uniqueChars = [...new Set(countArr)];
+  //console.log(uniqueChars);
+
+  if(numConditional >= arr2Length && uniqueChars < arr2Length){
+    return true;
+  }
+  else{ return false; }
+  ---------NEXT ATTEMPT-------
+  let stringOne = arr[0].toLowerCase();
+  let stringTwo = arr[1].toLowerCase();
+
+  let arrayOne = [...stringOne];
+  let arrayTwo = [...stringTwo];
+  //console.log(arrayOne + ' | ' +arrayTwo);
+  for (let i = 0; i < arrayTwo.length; i++){
+    if (arrayOne.indexOf(arrayTwo[i]) < 0){
+      return false;
+    }
+    return true;
+  }
+  */
+  let stringOne = arr[0].toLowerCase();
+  let stringTwo = arr[1].toLowerCase();
+  for (let i = 0; i < stringTwo.length; i++) {
+    if (stringOne.indexOf(stringTwo[i]) < 0) return false;
+  }
+  return true;
+  
+}
+
+mutation(["hello", "neo"]);

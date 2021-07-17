@@ -1,0 +1,31 @@
+function findLongestWordLength(str) {
+  var res = str.split(" ");
+  var num = res.length - 1;
+  var charNumArray = [];
+  for (let i = 0; i <= num; i++){
+    charNumArray[i] = res[i].length;
+  }
+  console.log(res);
+  console.log(charNumArray);
+  for (let i = 1; i < num + 1; ++i) {
+    if (charNumArray[0] < charNumArray[i]) {
+      charNumArray[0] = charNumArray[i];
+    }
+  }
+  console.log(res);
+  console.log(charNumArray);
+  console.log('HERE: ' + charNumArray[0]);
+  return res = charNumArray[0];
+}
+
+findLongestWordLength("What if we try a super-long word such as otorhinolaryngology");
+
+
+/*
+
+Find the Longest Word in a String
+Return the length of the longest word in the provided sentence.
+
+Your response should be a number.
+
+*/

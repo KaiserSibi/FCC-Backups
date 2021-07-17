@@ -1,0 +1,28 @@
+function reverseString(str) {
+  //let x = 0;
+  let arr = [...str];
+  for(let i = str.length-1; i >= 0; i--) {
+      arr.push(str[i]);
+  }
+  for(let j = 0; j <= str.length-1; j++){
+    delete arr[j];
+  }
+  let arr2 = arr.slice(str.length, arr.length);
+  str = arr2.join('');
+  console.log(str);
+  //arr.slice(2,4); 
+  return str;
+}
+
+reverseString("olleh");
+
+/*
+
+Reverse a String
+Reverse the provided string.
+
+You may need to turn the string into an array before you can reverse it.
+
+Your result must be a string.
+
+*/
