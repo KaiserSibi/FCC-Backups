@@ -1,0 +1,19 @@
+function uniteUnique() {
+  // Getting arguments -> array
+  let argumentsArray = [];
+  for (let x = 0; x < arguments.length; x++){
+    argumentsArray.push(arguments[x]);
+  }
+  // Set base array
+  let baseArr = argumentsArray[0];
+  for (let x = 0; x < argumentsArray.length; x++){          // Crawling through argumentsArray
+    for (let y = 0; y < argumentsArray[x].length; y++){     // Crawling through sub-arrays
+      if(baseArr.indexOf(argumentsArray[x][y]) === -1){     // Compare if elements in other arrays are in argumentsArray[0]
+        baseArr.push(argumentsArray[x][y]);                 // Push if condition above proves true
+      }
+    }
+  }
+  return baseArr;
+}
+
+uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]);

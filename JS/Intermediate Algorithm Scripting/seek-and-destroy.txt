@@ -1,0 +1,18 @@
+function destroyer(arr) {
+  let argsArray = [...arguments];
+  let argsOne = [...argsArray[0]];
+  let argsTwo = argsArray.splice(1);
+  let finalArr = argsOne.filter((item) => !argsTwo.includes(item));
+  console.log(argsOne, argsTwo, finalArr);
+  return finalArr;
+}
+
+destroyer([1, 2, 3, 1, 2, 3], 2, 3);
+
+/*
+Seek and Destroy
+You will be provided with an initial array (the first argument in the destroyer function), followed by one or more arguments. Remove all elements from the initial array that are of the same value as these arguments.
+
+Note: You have to use the arguments object.
+*/
+

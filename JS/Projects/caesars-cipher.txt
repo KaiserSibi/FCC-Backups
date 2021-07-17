@@ -1,0 +1,43 @@
+function rot13(str) {
+  let arrAlphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P",
+  "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+  let arrStr = [...str];
+  let arrStrDecoded = [];
+  for (let x = 0; x < arrStr.length; x++){
+    arrStr[x] == "A" ? arrStrDecoded.push("N") : x;
+    arrStr[x] == "B" ? arrStrDecoded.push("O") : x;
+    arrStr[x] == "C" ? arrStrDecoded.push("P") : x;
+    arrStr[x] == "D" ? arrStrDecoded.push("Q") : x;
+    arrStr[x] == "E" ? arrStrDecoded.push("R") : x;
+    arrStr[x] == "F" ? arrStrDecoded.push("S") : x;
+    arrStr[x] == "G" ? arrStrDecoded.push("T") : x;
+    arrStr[x] == "H" ? arrStrDecoded.push("U") : x;
+    arrStr[x] == "I" ? arrStrDecoded.push("V") : x;
+    arrStr[x] == "J" ? arrStrDecoded.push("W") : x;
+    arrStr[x] == "K" ? arrStrDecoded.push("X") : x;
+    arrStr[x] == "L" ? arrStrDecoded.push("Y") : x;
+    arrStr[x] == "M" ? arrStrDecoded.push("Z") : x;
+    arrStr[x] == "N" ? arrStrDecoded.push("A") : x;
+    arrStr[x] == "O" ? arrStrDecoded.push("B") : x;
+    arrStr[x] == "P" ? arrStrDecoded.push("C") : x;
+    arrStr[x] == "Q" ? arrStrDecoded.push("D") : x;
+    arrStr[x] == "R" ? arrStrDecoded.push("E") : x;
+    arrStr[x] == "S" ? arrStrDecoded.push("F") : x;
+    arrStr[x] == "T" ? arrStrDecoded.push("G") : x;
+    arrStr[x] == "U" ? arrStrDecoded.push("H") : x;
+    arrStr[x] == "V" ? arrStrDecoded.push("I") : x;
+    arrStr[x] == "W" ? arrStrDecoded.push("J") : x;
+    arrStr[x] == "X" ? arrStrDecoded.push("K") : x;
+    arrStr[x] == "Y" ? arrStrDecoded.push("L") : x;
+    arrStr[x] == "Z" ? arrStrDecoded.push("M") : x;
+    arrStr[x] == " " ? arrStrDecoded.push(" ") : x;
+    arrStr[x] == "?" ? arrStrDecoded.push("?") : x;
+    arrStr[x] == "!" ? arrStrDecoded.push("!") : x;
+    arrStr[x] == "." ? arrStrDecoded.push(".") : x;
+  }
+  let strArr = arrStrDecoded.join("");
+  console.log(strArr);
+  return strArr;
+}
+
+rot13("SERR PBQR PNZC");

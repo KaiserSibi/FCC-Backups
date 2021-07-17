@@ -1,0 +1,33 @@
+function addTogether() {
+  let intSum;
+  if (arguments.length === 2){ 
+    if (typeof arguments[0] === "number" && typeof arguments[1] === "number"){
+      intSum = arguments[0] + arguments[1];
+      return intSum;
+    }
+    else {
+      return undefined;
+    }
+  } else if (arguments.length === 1) {
+    let intFirstNum = arguments[0];
+    if(typeof intFirstNum === "number"){
+      function addSecondNumber(intSecondNum){
+        if(typeof intSecondNum === "number"){
+          intSum = intFirstNum + intSecondNum;
+          console.log(intSum);
+          return intSum;
+        } else{ 
+          return undefined;
+        }
+      }
+      return addSecondNumber;
+    }
+    else {
+      return undefined;
+    }
+  }
+  return undefined;
+}
+
+
+addTogether(5)([7]);

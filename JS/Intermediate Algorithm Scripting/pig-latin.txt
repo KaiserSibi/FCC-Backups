@@ -1,0 +1,23 @@
+function translatePigLatin(str) {
+  let regex = /[aeiou]/gmi;
+  let firstVowel = str.search(regex);
+  let consonantAddition = ['a', 'y']
+  if (firstVowel === 0){
+    return str += "way";
+  }
+  if (firstVowel === -1){
+    consonantAddition = consonantAddition.join("");
+    str += consonantAddition;
+    return str;
+  }
+  else {
+    let str2Array = [...str];
+    let str2Modified = str2Array.splice(firstVowel);
+    str = str2Modified.concat(str2Array);
+    str = str.concat(consonantAddition);
+    str = str.join("");
+    return str;
+  }
+}
+
+translatePigLatin("rhythm");

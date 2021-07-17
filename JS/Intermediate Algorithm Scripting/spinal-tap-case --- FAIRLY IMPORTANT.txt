@@ -1,0 +1,23 @@
+function spinalCase(str) {
+  let normalizeStr = str
+    .replace(/([^a-zA-Z0-9])/gmi, ' ')
+    .replace(/([a-z])([A-Z])/g, '$1 $2')
+    .replace(/([A-Z])([A-Z][a-z])/g, '$1 $2')   
+  let strArray = [...normalizeStr];
+  for (let x = 0; x < strArray.length; x++){
+    if(strArray[x] == ' '){
+      strArray[x] = '-';
+    }
+  }
+  let arrString = strArray
+    .join('')
+    .toLowerCase();
+  return arrString;
+}
+
+spinalCase('this_IsSpinalTap');
+
+/*
+Spinal Tap Case
+Convert a string to spinal case. Spinal case is all-lowercase-words-joined-by-dashes.
+*/

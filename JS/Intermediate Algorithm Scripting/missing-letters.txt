@@ -1,0 +1,27 @@
+function fearNotLetter(str) {
+  str = str.toUpperCase();
+  let alpha = Array.from(Array(26)).map((e, i) => i + 65);
+  let alphabet = alpha.map((x) => String.fromCharCode(x));
+  let str2Array = [...str];
+  let indCharBefore = str2Array[0];
+  let indexNum = 0;
+  let result = "";
+
+  for (let x = 0; x < alphabet.length; x++){
+    if (indCharBefore.toUpperCase() == alphabet[x]){
+      indexNum += x;
+    }
+  }
+  for (let x = 0; x < str2Array.length; x++){
+    if (str2Array[x] !== alphabet[indexNum]){
+      result = alphabet[indexNum].toLowerCase();
+      return result;
+    }
+    else {
+      indexNum += 1;
+    }
+  }
+  return undefined;
+}
+
+fearNotLetter("abcdefghjklmno");

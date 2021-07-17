@@ -1,0 +1,20 @@
+function sumFibs(num) {
+  let num1 = 0;
+  let num2 = 1;
+  let nextNum = num1 + num2; 
+  let arrayNum = [1, 1];
+  let sum = 0;
+  for (let x = 0; nextNum <= num; x++){
+    num1 = num2;
+    num2 = nextNum;
+    nextNum = num1 + num2;
+    arrayNum.push(nextNum);
+  }
+  arrayNum.pop();
+  for (let x = 0; x < arrayNum.length; x++){
+    arrayNum[x] % 2 > 0 ? sum = sum + arrayNum[x] : x;
+  }
+  return sum;
+}
+
+sumFibs(1000);
